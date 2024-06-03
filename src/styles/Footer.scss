@@ -7,9 +7,28 @@ footer {
   align-items: center;
   text-align: center;
   padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: black;
-  color: white;
+  padding-top: 15px;
+  background: -moz-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 0.404),
+    rgba(0, 255, 0, 0)
+  );
+  background: -webkit-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 0.404),
+    rgba(0, 255, 0, 0)
+  );
+  background: -ms-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 0.404),
+    rgba(0, 255, 255, 0)
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 0.404),
+    rgba(0, 255, 255, 0)
+  );
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 footer h2 {

@@ -25,7 +25,7 @@ function Home() {
         <p>Disponible</p>
       </div>
 
-      <div className="incoContainer">
+      <div className="iconContainer">
         <img
           src={phone}
           alt=""

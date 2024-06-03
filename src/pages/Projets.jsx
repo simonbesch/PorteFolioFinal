@@ -1,48 +1,20 @@
 import "../styles/Projets.scss";
 import allProjets from "../datas/projetsDatas";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Projets() {
-  const [divData, setDivData] = useState("");
-  const [isData, setIsData] = useState(false);
-
   const mapProjets = allProjets.map((datas) =>
     datas.upload === "yes" ? (
       datas.category === "projets" ? (
-        <div
-          className="divEvenement"
-          onClick={() => {
-            {
-              isData ? setDivData("") : setDivData(datas), setIsData(!isData);
-            }
-          }}
-        >
-          <h4 key={datas.id} className="NameProject">
-            {datas.name}
-          </h4>
-          <p>
-            {divData.id === datas.id ? (
-              <div className="divOpenEvenement">
-                <img src={datas.img} alt="" />
-                <p>
-                  <span className="titleProject">Description :</span>
-                </p>
-                <p>{datas.description}</p>
-                <p>
-                  <span className="titleProject">Collaborateurs :</span>
-                </p>
-                <p>{datas.mates}</p>
-                <p>
-                  <span className="titleProject">Github :</span>
-                </p>
-                <p>{datas.github}</p>
-                <p>
-                  <span className="titleProject">Deploiment :</span>
-                </p>
-                <p>{datas.online}</p>
-              </div>
-            ) : null}
-          </p>
+        <div className="divEvenement">
+          <div className="divEvenementContainer">
+            <Link to={`/projects/${datas.id}`}>
+              <img src={datas.img} alt="" />
+              <h4 key={datas.id} className="NameProject">
+                {datas.name}
+              </h4>
+            </Link>
+          </div>
         </div>
       ) : null
     ) : null
@@ -51,39 +23,15 @@ function Projets() {
   const mapCheckPoints = allProjets.map((datas) =>
     datas.upload === "yes" ? (
       datas.category === "checkPoints" ? (
-        <div
-          className="divEvenement"
-          onClick={() => {
-            {
-              isData ? setDivData("") : setDivData(datas), setIsData(!isData);
-            }
-          }}
-        >
-          <h4 key={datas.id} className="NameProject">
-            {datas.name}
-          </h4>
-          <p>
-            {divData.id === datas.id ? (
-              <div className="divOpenEvenement">
-                <p>
-                  <span className="titleProject">Description :</span>
-                </p>
-                <p>{datas.description}</p>
-                <p>
-                  <span className="titleProject">Collaborateurs :</span>
-                </p>
-                <p>{datas.mates}</p>
-                <p>
-                  <span className="titleProject">Github :</span>
-                </p>
-                <p>{datas.github}</p>
-                <p>
-                  <span className="titleProject">Deploiment :</span>
-                </p>
-                <p>{datas.online}</p>
-              </div>
-            ) : null}
-          </p>
+        <div className="divEvenement">
+          <div className="divEvenementContainer">
+            <Link to={`/projects/${datas.id}`}>
+              <img src={datas.img} alt="" />
+              <h4 key={datas.id} className="NameProject">
+                {datas.name}
+              </h4>
+            </Link>
+          </div>
         </div>
       ) : null
     ) : null
@@ -92,39 +40,15 @@ function Projets() {
   const mapAteliers = allProjets.map((datas) =>
     datas.upload === "yes" ? (
       datas.category === "ateliers" ? (
-        <div
-          className="divEvenement"
-          onClick={() => {
-            {
-              isData ? setDivData("") : setDivData(datas), setIsData(!isData);
-            }
-          }}
-        >
-          <h4 key={datas.id} className="NameProject">
-            {datas.name}
-          </h4>
-          <p>
-            {divData.id === datas.id ? (
-              <div className="divOpenEvenement">
-                <p>
-                  <span className="titleProject">Description :</span>
-                </p>
-                <p>{datas.description}</p>
-                <p>
-                  <span className="titleProject">Collaborateurs :</span>
-                </p>
-                <p>{datas.mates}</p>
-                <p>
-                  <span className="titleProject">Github :</span>
-                </p>
-                <p>{datas.github}</p>
-                <p>
-                  <span className="titleProject">Deploiment :</span>
-                </p>
-                <p>{datas.online}</p>
-              </div>
-            ) : null}
-          </p>
+        <div className="divEvenement">
+          <div className="divEvenementContainer">
+            <Link to={`/projects/${datas.id}`}>
+              <img src={datas.img} alt="" />
+              <h4 key={datas.id} className="NameProject">
+                {datas.name}
+              </h4>
+            </Link>
+          </div>
         </div>
       ) : null
     ) : null
@@ -133,39 +57,15 @@ function Projets() {
   const mapQuetes = allProjets.map((datas) =>
     datas.upload === "yes" ? (
       datas.category === "quetes" ? (
-        <div
-          className="divEvenement"
-          onClick={() => {
-            {
-              isData ? setDivData("") : setDivData(datas), setIsData(!isData);
-            }
-          }}
-        >
-          <h4 key={datas.id} className="NameProject">
-            {datas.name}
-          </h4>
-          <p>
-            {divData.id === datas.id ? (
-              <div className="divOpenEvenement">
-                <p>
-                  <span className="titleProject">Description :</span>
-                </p>
-                <p>{datas.description}</p>
-                <p>
-                  <span className="titleProject">Collaborateurs :</span>
-                </p>
-                <p>{datas.mates}</p>
-                <p>
-                  <span className="titleProject">Github :</span>
-                </p>
-                <p>{datas.github}</p>
-                <p>
-                  <span className="titleProject">Deploiment :</span>
-                </p>
-                <p>{datas.online}</p>
-              </div>
-            ) : null}
-          </p>
+        <div className="divEvenement">
+          <div className="divEvenementContainer">
+            <Link to={`/projects/${datas.id}`}>
+              <img src={datas.img} alt="" />
+              <h4 key={datas.id} className="NameProject">
+                {datas.name}
+              </h4>
+            </Link>
+          </div>
         </div>
       ) : null
     ) : null
@@ -174,39 +74,13 @@ function Projets() {
   const mapProjetsPerso = allProjets.map((datas) =>
     datas.upload === "yes" ? (
       datas.category === "projetsPerso" ? (
-        <div
-          className="divEvenement"
-          onClick={() => {
-            {
-              isData ? setDivData("") : setDivData(datas), setIsData(!isData);
-            }
-          }}
-        >
-          <h4 key={datas.id} className="NameProject">
-            {datas.name}
-          </h4>
-          <p>
-            {divData.id === datas.id ? (
-              <div className="divOpenEvenement">
-                <p>
-                  <span className="titleProject">Description :</span>
-                </p>
-                <p>{datas.description}</p>
-                <p>
-                  <span className="titleProject">Collaborateurs :</span>
-                </p>
-                <p>{datas.mates}</p>
-                <p>
-                  <span className="titleProject">Github :</span>
-                </p>
-                <p>{datas.github}</p>
-                <p>
-                  <span className="titleProject">Deploiment :</span>
-                </p>
-                <p>{datas.online}</p>
-              </div>
-            ) : null}
-          </p>
+        <div className="divEvenement">
+          <Link to={`/projects/${datas.id}`}>
+            <img src={datas.img} alt="" />
+            <h4 key={datas.id} className="NameProject">
+              {datas.name}
+            </h4>
+          </Link>
         </div>
       ) : null
     ) : null
@@ -214,26 +88,16 @@ function Projets() {
 
   return (
     <div className="ProjetsContainerAll">
-      <div className="ProjectContainer">
-        <h3>Projets:</h3>
-        {mapProjets}
-      </div>
-      <div className="ProjectContainer">
-        <h3>CheckPoints:</h3>
-        {mapCheckPoints}
-      </div>
-      <div className="ProjectContainer">
-        <h3>Ateliers:</h3>
-        {mapAteliers}
-      </div>
-      <div className="ProjectContainer">
-        <h3>Quetes:</h3>
-        {mapQuetes}
-      </div>
-      <div className="ProjectContainer">
-        <h3>Projets Personnels:</h3>
-        {mapProjetsPerso}
-      </div>
+      <h3>Projets:</h3>
+      <div className="ProjectContainer">{mapProjets}</div>
+      <h3>CheckPoints:</h3>
+      <div className="ProjectContainer">{mapCheckPoints}</div>
+      <h3>Ateliers:</h3>
+      <div className="ProjectContainer">{mapAteliers}</div>
+      <h3>Quetes:</h3>
+      <div className="ProjectContainer">{mapQuetes}</div>
+      <h3>Projets Personnels:</h3>
+      <div className="ProjectContainer">{mapProjetsPerso}</div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Projets from "./pages/Projets";
 import WhoIam from "./pages/WhoIam";
 import About from "./pages/About";
+import ProjetsDetails from "./pages/ProjetsDetails";
 import "./styles/Global.scss";
 import { WeatherProvider } from "./contexts/WeatherContext";
 
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
+        path: "/projects/:id",
+        element: <ProjetsDetails />,
+        errorElement: <ErrorPage />,
+      },
+      {
         path: "/contact",
         element: <Contact />,
         errorElement: <ErrorPage />,
@@ -49,6 +55,11 @@ const router = createBrowserRouter([
       {
         path: "/whoiam",
         element: <WhoIam />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "*",
+        element: <h1>404 Page non trouvé</h1>,
         errorElement: <ErrorPage />,
       },
     ],
